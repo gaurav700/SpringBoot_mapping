@@ -31,7 +31,7 @@ public class StudentController {
         return new ResponseEntity<>(toSave, HttpStatus.CREATED);
     }
 
-    @PutMapping(path = "/{studentId/admission/{admissionId}")
+    @PutMapping(path = "/{studentId}/admission/{admissionId}")
     public ResponseEntity<StudentDTO> studentOneToOneMappingToAdmission(@PathVariable Long studentId, @PathVariable Long admissionId){
         StudentDTO toSave = ss.studentOneToOneMappingToAdmission(studentId, admissionId);
         return new ResponseEntity<>(toSave, HttpStatus.CREATED);
